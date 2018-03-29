@@ -1,0 +1,43 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.ctfin.framework</groupId>
+	<artifactId>code-framework</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>Archetype - code-framework</name>
+	<url>http://maven.apache.org</url>
+	<distributionManagement>
+		<repository>
+			<id>thirdparty</id>
+			<name>ctfin_thirdparty</name>
+			<url>http://192.168.1.202:9091/repository/thirdparty/</url>
+		</repository>
+	</distributionManagement>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-archetype-plugin</artifactId>
+				<version>2.3</version>
+			</plugin>
+
+			<plugin>  <!-- 打源码 -->
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>2.4</version>
+				<configuration>
+					<attach>true</attach>
+				</configuration>
+				<executions>
+					<execution>
+						<phase>compile</phase>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>
